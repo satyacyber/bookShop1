@@ -16,10 +16,22 @@ public class CartItem {
 
     @OneToOne
     Product product;
+
+
+
     Integer cust_quantity;
 
     public CartItem(Product product, Integer cust_quantity) {
         this.product = product;
         this.cust_quantity = cust_quantity;
+    }
+
+    @Override
+    public String toString() {
+        return "CartItem{" +
+                "id=" + id +
+                ", product=" + product +
+                ", cust_quantity=" + cust_quantity +
+                '}';
     }
 }

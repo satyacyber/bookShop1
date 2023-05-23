@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table
@@ -21,7 +20,8 @@ public class Cart {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer cartId;
 
-    @OneToOne
+    @OneToMany
+    @JoinColumn(name = "cart_id")
     List<CartItem> cartItems;
 
     @OneToOne
@@ -31,4 +31,6 @@ public class Cart {
         this.cartItems = cartItems;
         this.user = user;
     }
+
+
 }

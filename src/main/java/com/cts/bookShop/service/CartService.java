@@ -40,15 +40,18 @@ public class CartService {
         if(exist!=null){
             final int flag[]= new int[1];
             exist.getCartItems().stream().forEach(e->{
-                if(e.getProduct().getPId()==productId)
+                if(e.getProduct().getPId()==productId){
                     e.setCust_quantity(e.getCust_quantity()+1);
-                flag[0]=1;
+                    flag[0]=1;
+                }
+
             });
             cartDao.save(exist);
 
-
+            System.out.println(flag[0]);
             if(flag[0]==0){
                 CartItem item= new CartItem(prod,1);
+                System.out.println("hulu");//printing object
                 cartItemDao.save(item);
                 exist.getCartItems().add(item);
                 cartDao.save(exist);
@@ -66,5 +69,24 @@ public class CartService {
 
 
     }
+
+    public void removeFromCart(Integer cartItemId) {
+        String uname= CURRENT_USER;
+        User user = userDao.findByUserName(CURRENT_USER);
+        Cart cart = cartDao.findByUser(user);
+        cart.getCartItems().removeIf(cartItem -> cartItem.getProduct().getPId()==cartItemId);
+
+    }
+
+    public List<CartItem> getAllCartItems() {
+        User user = userDao.findByUserName(CURRENT_USER);
+        Cart cart = cartDao.findByUser(user);
+        if (cart != null) {
+            return cart.getCartItems();
+        }
+        return new ArrayList<>();
+    }
+
+
 
 }
