@@ -23,7 +23,10 @@ public class CartController {
          return cartService.addToCart(productId);
     }
 
-//    @GetMapping("/removeFromCart/{cartItemId}")
+  @GetMapping("/removeFromCart/{cartItemId}")
+  public void removeFromCart(@PathVariable Integer pId){
+        cartService.removeFromCart(pId);
+  }
 //    public ResponseEntity<String> removeFromCart(@PathVariable Integer cartItemId) {
 //        cartService.removeFromCart(cartItemId);
 //        return ResponseEntity.ok("Item removed from cart successfully.");
