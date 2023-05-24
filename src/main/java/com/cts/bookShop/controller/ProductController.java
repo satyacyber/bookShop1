@@ -17,13 +17,13 @@ public class ProductController {
 
     @GetMapping({"/products"})
     @PreAuthorize(
-            "hasAuthority('USER')"
+            "hasAuthority('ADMIN')"
     )
     public List<Product> getAllProducts() {
         return productService.getAllProducts();
     }
 
-    @PostMapping({"/products"})
+    @PostMapping({"/addProducts"})
     public Product addProduct(@RequestBody Product product) {
         return productService.addProduct(product);
     }
@@ -33,12 +33,12 @@ public class ProductController {
         return productService.getProductId(id);
     }
 
-    @PutMapping({"/products/{id}"})
+    @PutMapping({"/updateProducts/{id}"})
     public ResponseEntity<Product> updateProduct(@PathVariable Integer id, @RequestBody Product newProduct) {
         return productService.updateProduct(id, newProduct);
     }
 
-    @DeleteMapping({"/products/{id}"})
+    @DeleteMapping({"/deleteProducts/{id}"})
     public ResponseEntity<Product> deleteProduct(@PathVariable Integer id) {
         return productService.deleteProduct(id);
     }

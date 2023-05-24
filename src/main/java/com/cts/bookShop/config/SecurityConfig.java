@@ -32,11 +32,11 @@ public class SecurityConfig {
 
         return  http.csrf().disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/products/**")
+                .requestMatchers("/user/signup","/user/login")
                 .permitAll()
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers("/user/**")
+                .requestMatchers("/addProducts","/deleteProducts","/products")
                 .authenticated()
                 .and()
                 .formLogin()

@@ -33,7 +33,7 @@ public class CartService {
 
 
     public Cart addToCart(Integer productId){
-        User user = userDao.findByUserName(CURRENT_USER);
+        User user = userDao.findByUserName(CURRENT_USER).get();
         Product prod= productDao.findById(productId).get();
         Cart exist=null;
         exist=cartDao.findByUser(user);
@@ -72,14 +72,14 @@ public class CartService {
 
     public void removeFromCart(Integer cartItemId) {
         String uname= CURRENT_USER;
-        User user = userDao.findByUserName(CURRENT_USER);
+        User user = userDao.findByUserName(CURRENT_USER).get();
         Cart cart = cartDao.findByUser(user);
         cart.getCartItems().removeIf(cartItem -> cartItem.getProduct().getPId()==cartItemId);
 
     }
 
     public List<CartItem> getAllCartItems() {
-        User user = userDao.findByUserName(CURRENT_USER);
+        User user = userDao.findByUserName(CURRENT_USER).get();
         Cart cart = cartDao.findByUser(user);
         if (cart != null) {
             return cart.getCartItems();
