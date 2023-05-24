@@ -4,6 +4,7 @@ import com.cts.bookShop.entity.Product;
 import com.cts.bookShop.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,6 +16,9 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping({"/products"})
+    @PreAuthorize(
+            "hasAuthority('USER')"
+    )
     public List<Product> getAllProducts() {
         return productService.getAllProducts();
     }

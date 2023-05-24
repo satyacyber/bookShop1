@@ -5,6 +5,7 @@ import com.cts.bookShop.entity.User;
 import com.cts.bookShop.exception.ResourceNotFoundException;
 import com.cts.bookShop.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -15,6 +16,10 @@ public class UserController {
     public static String  CURRENT_USER="";
     @Autowired
     public UserService userservice;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @PostMapping("/signup")
         public User registerUser (@RequestBody User user) throws Exception{
         return  userservice.saveUser(user);
