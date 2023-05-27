@@ -28,15 +28,15 @@ public class SecurityConfig {
 
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         return  http.csrf().disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/user/signup","/user/login")
+                .requestMatchers("/*/*","/*")
                 .permitAll()
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers("/addProducts","/deleteProducts","/products")
+                .requestMatchers("/products")
                 .authenticated()
                 .and()
                 .formLogin()
