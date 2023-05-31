@@ -23,7 +23,7 @@ public class CartController {
          return cartService.addToCart(productId);
     }
 
-  @GetMapping("/removeFromCart/{cartItemId}")
+  @GetMapping("/removeFromCart/{pId}")
   public void removeFromCart(@PathVariable Integer pId){
         cartService.removeFromCart(pId);
   }

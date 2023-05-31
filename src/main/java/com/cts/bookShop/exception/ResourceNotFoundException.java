@@ -1,6 +1,6 @@
 package com.cts.bookShop.exception;
 
-public class ResourceNotFoundException extends RuntimeException {
+public class    ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException() {
 
     }

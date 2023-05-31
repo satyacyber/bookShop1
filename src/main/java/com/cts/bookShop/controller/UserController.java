@@ -23,6 +23,9 @@ public class UserController {
     private static final String user_role="USER";
     @PostMapping("/signup")
         public User registerUser (@RequestBody User user) throws Exception{
+        if(user.getUserName()==null|| user.getEmailId()==null|| user.getPassword()==null) {
+            throw new ResourceNotFoundException("Feild Missing");
+        }
         user.setRole(user_role);
         //System.out.println(user.getRole());
         return  userservice.saveUser(user);

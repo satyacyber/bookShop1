@@ -36,7 +36,7 @@ public class SecurityConfig {
                 .permitAll()
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers("/products")
+                .requestMatchers("")
                 .authenticated()
                 .and()
                 .formLogin()

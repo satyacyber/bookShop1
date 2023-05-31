@@ -1,5 +1,6 @@
 package com.cts.bookShop.service;
 
+import com.cts.bookShop.ServiceInterf.CartInterf;
 import com.cts.bookShop.controller.UserController;
 import com.cts.bookShop.dao.CartDao;
 import com.cts.bookShop.dao.CartItemDao;
@@ -9,6 +10,7 @@ import com.cts.bookShop.entity.Cart;
 import com.cts.bookShop.entity.CartItem;
 import com.cts.bookShop.entity.Product;
 import com.cts.bookShop.entity.User;
+import com.cts.bookShop.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +22,7 @@ import java.util.Set;
 import static com.cts.bookShop.controller.UserController.CURRENT_USER;
 
 @Service
-public class CartService {
+public class CartService implements CartInterf {
     @Autowired
     private CartDao cartDao;
     @Autowired
@@ -38,7 +40,7 @@ public class CartService {
         Cart exist=null;
         exist=cartDao.findByUser(user);
         if(exist!=null){
-            final int flag[]= new int[1];
+            final int flag[]= new int[1];//to check if the product exist in the cart or not
             exist.getCartItems().stream().forEach(e->{
                 if(e.getProduct().getPId()==productId){
                     e.setCust_quantity(e.getCust_quantity()+1);
@@ -48,10 +50,9 @@ public class CartService {
             });
             cartDao.save(exist);
 
-            System.out.println(flag[0]);
+            //System.out.println(flag[0]);
             if(flag[0]==0){
                 CartItem item= new CartItem(prod,1);
-                System.out.println("hulu");//printing object
                 cartItemDao.save(item);
                 exist.getCartItems().add(item);
                 cartDao.save(exist);
@@ -74,7 +75,9 @@ public class CartService {
         String uname= CURRENT_USER;
         User user = userDao.findByUserName(CURRENT_USER).get();
         Cart cart = cartDao.findByUser(user);
+
         cart.getCartItems().removeIf(cartItem -> cartItem.getProduct().getPId()==cartItemId);
+        cartDao.save(cart);
 
     }
 
@@ -84,7 +87,11 @@ public class CartService {
         if (cart != null) {
             return cart.getCartItems();
         }
-        return new ArrayList<>();
+        else{
+            throw new ResourceNotFoundException("Cart not found");
+
+        }
+//        return new ArrayList<>();
     }
 
 

@@ -1,5 +1,6 @@
 package com.cts.bookShop.service;
 
+import com.cts.bookShop.ServiceInterf.UserInterf;
 import com.cts.bookShop.dao.UserDao;
 import com.cts.bookShop.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +8,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserService {
+public class UserService  implements UserInterf {
 
         @Autowired
         private UserDao userdao;

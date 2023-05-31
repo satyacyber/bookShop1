@@ -1,5 +1,6 @@
 package com.cts.bookShop.service;
 
+import com.cts.bookShop.ServiceInterf.ProductInterf;
 import com.cts.bookShop.dao.ProductDao;
 import com.cts.bookShop.entity.Product;
 import com.cts.bookShop.exception.ResourceNotFoundException;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ProductService {
+public class ProductService implements ProductInterf {
     @Autowired
     private ProductDao productDao;
 
@@ -37,7 +38,6 @@ public class ProductService {
         product.setDescription(newProduct.getDescription());
         product.setQuantity(newProduct.getQuantity());
         product.setPrice(newProduct.getPrice());
-
         Product updatedProduct = productDao.save(product);
         return ResponseEntity.ok(updatedProduct);
     }
