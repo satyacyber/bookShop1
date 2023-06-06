@@ -42,9 +42,6 @@ public class OrderService implements OrderInterf {
                 p = x.getProduct();
                 p.setQuantity(p.getQuantity() - 1);
                 productDao.save(p);
-                //System.out.println("iN ORDER");
-               // cartService.removeFromCart(x.getProduct().getPId());
-
             }
             OrderData orderData = new OrderData(user, cartExist, amount);
             orderDao.save(orderData);
