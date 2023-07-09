@@ -4,7 +4,11 @@ package com.cts.bookShop.controller;
 import com.cts.bookShop.entity.User;
 import com.cts.bookShop.exception.ResourceNotFoundException;
 import com.cts.bookShop.service.UserService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,43 +21,33 @@ public class UserController {
     @Autowired
     public UserService userservice;
 
+    private static final Logger logger = LogManager.getLogger(UserController.class);
+
     @Autowired
     private PasswordEncoder passwordEncoder;
 
     private static final String user_role="USER";
     @PostMapping("/signup")
+    @CrossOrigin(origins="http://localhost:3000")
         public User registerUser (@RequestBody User user) throws Exception{
+        logger.info("Registering user: {}", user);
         if(user.getUserName()==null|| user.getEmailId()==null|| user.getPassword()==null) {
             throw new ResourceNotFoundException("Feild Missing");
         }
         user.setRole(user_role);
-        //System.out.println(user.getRole());
+
         return  userservice.saveUser(user);
 
     }
-//    @GetMapping("/login")
-//    public User loginUser(@RequestBody User user) throws Exception{
-//        String tempMail=user.getEmailId();
-//        String tempPassword=user.getPassword();
-//        //String tempPassword=passwordEncoder.encode(user.getPassword());
-//        System.out.println(tempPassword);
-//        User userObj=null;
-//        if(tempPassword!=null && tempMail!=null){
-//            userObj=userservice.fetchUserByEmailIdAndPassword(tempMail,tempPassword);
-//        }
-//        if(userObj==null){
-//            throw new ResourceNotFoundException("Bad Credentials");
-//        }
-//        CURRENT_USER=userObj.getUserName();
-//        return userObj;
-//
-//    }
-@GetMapping("/login")
-public User loginUser(@RequestBody User user) throws Exception {
+
+@CrossOrigin(origins="http://localhost:3000")
+@PostMapping("/login")
+public ResponseEntity<User> loginUser(@RequestBody User user) throws Exception {
+    logger.info("User login: {}", user.getEmailId());
     String tempMail = user.getEmailId();
     String tempPassword = user.getPassword();
     User userObj = null;
-
+        //check for validation
     if (tempPassword != null && tempMail != null) {
         // Retrieve the user based on the provided email
         User existingUser = userservice.fetchUserByEmailId(tempMail);
@@ -69,11 +63,20 @@ public User loginUser(@RequestBody User user) throws Exception {
     }
 
     if (userObj == null) {
+        logger.error("Bad Credentials for user: {}", user.getEmailId());
         throw new ResourceNotFoundException("Bad Credentials");
     }
 
     CURRENT_USER = userObj.getUserName();
-    return userObj;
+    return ResponseEntity.ok(userObj);
 }
+
+    @GetMapping("/logout")
+    public ResponseEntity<String> logout() {
+        logger.info("User logout");
+        CURRENT_USER = "";
+        return new ResponseEntity<>("logged-out", HttpStatus.OK);
+    }
+
 
 }

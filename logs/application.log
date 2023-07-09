@@ -1,0 +1,184 @@
+2023-06-25 06:31:40.238  INFO [restartedMain] [c.c.b.BookShopApplication] - Starting BookShopApplication using Java 19.0.1 with PID 3540 (D:\bookShop1\target\classes started by satya in D:\bookShop1)
+2023-06-25 06:31:40.246  INFO [restartedMain] [c.c.b.BookShopApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-06-25 06:31:40.296  INFO [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-25 06:31:40.296  INFO [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-25 06:31:40.918  INFO [restartedMain] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-25 06:31:40.982  INFO [restartedMain] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 56 ms. Found 5 JPA repository interfaces.
+2023-06-25 06:31:41.726  INFO [restartedMain] [o.s.b.w.e.t.TomcatWebServer] - Tomcat initialized with port(s): 8080 (http)
+2023-06-25 06:31:41.727  INFO [restartedMain] [o.a.c.c.AprLifecycleListener] - An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.1]
+2023-06-25 06:31:41.727  INFO [restartedMain] [o.a.c.c.AprLifecycleListener] - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-25 06:31:41.739  INFO [restartedMain] [o.a.c.c.AprLifecycleListener] - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-25 06:31:41.747  INFO [restartedMain] [o.a.c.c.StandardService] - Starting service [Tomcat]
+2023-06-25 06:31:41.748  INFO [restartedMain] [o.a.c.c.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-25 06:31:41.800  INFO [restartedMain] [o.a.c.c.C.[.[.[/]] - Initializing Spring embedded WebApplicationContext
+2023-06-25 06:31:41.800  INFO [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1503 ms
+2023-06-25 06:31:41.949  INFO [restartedMain] [o.h.j.i.u.LogHelper] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-25 06:31:41.996  INFO [restartedMain] [o.h.Version] - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-06-25 06:31:42.221  INFO [restartedMain] [c.z.h.HikariDataSource] - HikariPool-1 - Starting...
+2023-06-25 06:31:42.540  INFO [restartedMain] [c.z.h.p.HikariPool] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a5e6989
+2023-06-25 06:31:42.542  INFO [restartedMain] [c.z.h.HikariDataSource] - HikariPool-1 - Start completed.
+2023-06-25 06:31:42.557  INFO [restartedMain] [SQL dialect] - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-06-25 06:31:42.558  WARN [restartedMain] [o.h.o.deprecation] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-25 06:31:43.345  INFO [restartedMain] [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-25 06:31:43.353  INFO [restartedMain] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-25 06:31:43.743  WARN [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-25 06:31:43.969  INFO [restartedMain] [o.s.s.w.DefaultSecurityFilterChain] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@13ca4e4c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4cafde35, org.springframework.security.web.context.SecurityContextHolderFilter@7e360cf1, org.springframework.security.web.header.HeaderWriterFilter@2083dd25, org.springframework.web.filter.CorsFilter@3d0293e6, org.springframework.security.web.authentication.logout.LogoutFilter@646509f7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7bf838, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3fb7ed40, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@26bcf19b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7366cfad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50734fcc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67c5632e, org.springframework.security.web.access.ExceptionTranslationFilter@7399c835, org.springframework.security.web.access.intercept.AuthorizationFilter@6e39f6e3]
+2023-06-25 06:31:44.133  INFO [restartedMain] [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-06-25 06:31:44.163  INFO [restartedMain] [o.s.b.w.e.t.TomcatWebServer] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-25 06:31:44.172  INFO [restartedMain] [c.c.b.BookShopApplication] - Started BookShopApplication in 4.305 seconds (process running for 4.777)
+2023-06-25 06:33:20.556  INFO [http-nio-8080-exec-1] [o.a.c.c.C.[.[.[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-25 06:33:20.557  INFO [http-nio-8080-exec-1] [o.s.w.s.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-06-25 06:33:20.558  INFO [http-nio-8080-exec-1] [o.s.w.s.DispatcherServlet] - Completed initialization in 1 ms
+2023-06-25 06:33:20.688  INFO [http-nio-8080-exec-2] [c.c.b.c.UserController] - User login: test@gmail.com
+2023-06-25 06:33:20.935  INFO [http-nio-8080-exec-3] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 06:33:21.002  INFO [http-nio-8080-exec-4] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 06:33:25.491  INFO [http-nio-8080-exec-5] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 06:35:19.984  INFO [http-nio-8080-exec-8] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 06:35:25.996  INFO [http-nio-8080-exec-9] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 06:35:47.831  INFO [http-nio-8080-exec-10] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 06:35:49.992  INFO [http-nio-8080-exec-1] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 06:35:52.286  INFO [http-nio-8080-exec-2] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 06:35:54.996  INFO [http-nio-8080-exec-3] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 06:35:55.015  INFO [http-nio-8080-exec-4] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 06:35:56.331  INFO [http-nio-8080-exec-6] [c.c.b.c.UserController] - Removing product from the cart: 10
+2023-06-25 06:35:57.165  INFO [http-nio-8080-exec-8] [c.c.b.c.UserController] - Removing product from the cart: 9
+2023-06-25 06:35:58.348  INFO [http-nio-8080-exec-9] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 06:35:58.359  INFO [http-nio-8080-exec-10] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 06:36:00.657  INFO [http-nio-8080-exec-1] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 06:36:02.483  INFO [http-nio-8080-exec-2] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 06:36:02.502  INFO [http-nio-8080-exec-3] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 06:36:03.616  INFO [http-nio-8080-exec-4] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 06:36:03.626  INFO [http-nio-8080-exec-4] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 06:36:46.992  INFO [http-nio-8080-exec-6] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 06:36:57.032  INFO [http-nio-8080-exec-7] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 06:36:59.883  INFO [http-nio-8080-exec-8] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 06:37:10.063  INFO [http-nio-8080-exec-10] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 06:37:10.082  INFO [http-nio-8080-exec-1] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 06:37:11.523  INFO [http-nio-8080-exec-2] [c.c.b.c.UserController] - Removing product from the cart: 10
+2023-06-25 06:37:12.145  INFO [http-nio-8080-exec-5] [c.c.b.c.UserController] - Removing product from the cart: 11
+2023-06-25 06:37:13.455  INFO [http-nio-8080-exec-4] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 06:37:13.465  INFO [http-nio-8080-exec-6] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 06:37:15.405  INFO [http-nio-8080-exec-7] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 06:37:23.513  INFO [http-nio-8080-exec-8] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 06:37:32.029  INFO [http-nio-8080-exec-9] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 06:37:32.045  INFO [http-nio-8080-exec-10] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 06:37:33.704  INFO [http-nio-8080-exec-1] [c.c.b.c.UserController] - Removing product from the cart: 9
+2023-06-25 06:37:34.999  INFO [http-nio-8080-exec-2] [c.c.b.c.UserController] - Removing product from the cart: 10
+2023-06-25 06:40:19.266  INFO [http-nio-8080-exec-4] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 06:40:19.279  INFO [http-nio-8080-exec-6] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 06:40:21.487  INFO [http-nio-8080-exec-7] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 06:40:27.416  INFO [http-nio-8080-exec-8] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 06:40:31.663  INFO [http-nio-8080-exec-9] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 06:40:34.620  INFO [http-nio-8080-exec-10] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 06:40:34.635  INFO [http-nio-8080-exec-1] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 06:40:36.179  INFO [http-nio-8080-exec-2] [c.c.b.c.UserController] - Removing product from the cart: 9
+2023-06-25 06:40:36.800  INFO [http-nio-8080-exec-3] [c.c.b.c.UserController] - Removing product from the cart: 10
+2023-06-25 06:40:37.451  INFO [http-nio-8080-exec-5] [c.c.b.c.UserController] - Removing product from the cart: 11
+2023-06-25 06:42:05.189  INFO [http-nio-8080-exec-7] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 06:42:05.201  INFO [http-nio-8080-exec-8] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 06:42:07.716  INFO [http-nio-8080-exec-9] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 06:43:42.917  INFO [http-nio-8080-exec-2] [c.c.b.c.UserController] - User login: test@gmail.com
+2023-06-25 06:43:43.013  INFO [http-nio-8080-exec-3] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 06:43:43.025  INFO [http-nio-8080-exec-5] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 06:43:47.672  INFO [http-nio-8080-exec-4] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 06:43:52.651  INFO [http-nio-8080-exec-6] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 06:43:52.674  INFO [http-nio-8080-exec-7] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 06:43:55.160  INFO [http-nio-8080-exec-8] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 06:43:56.396  INFO [http-nio-8080-exec-9] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 06:43:59.973  INFO [http-nio-8080-exec-1] [c.c.b.c.UserController] - Removing product from the cart: 12
+2023-06-25 06:44:01.837  INFO [http-nio-8080-exec-2] [c.c.b.c.OrderController] - Making an order
+2023-06-25 06:44:01.875  INFO [http-nio-8080-exec-3] [c.c.b.c.OrderController] - Making an order
+2023-06-25 06:44:21.318  INFO [http-nio-8080-exec-5] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 06:44:21.332  INFO [http-nio-8080-exec-4] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 06:48:21.672  INFO [SpringApplicationShutdownHook] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-25 06:48:21.676  INFO [SpringApplicationShutdownHook] [c.z.h.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2023-06-25 06:48:21.718  INFO [SpringApplicationShutdownHook] [c.z.h.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2023-06-25 21:11:11.376  INFO [restartedMain] [c.c.b.BookShopApplication] - Starting BookShopApplication using Java 19.0.1 with PID 11832 (D:\bookShop1\target\classes started by satya in D:\bookShop1)
+2023-06-25 21:11:11.378  INFO [restartedMain] [c.c.b.BookShopApplication] - No active profile set, falling back to 1 default profile: "default"
+2023-06-25 21:11:11.429  INFO [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-25 21:11:11.429  INFO [restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-25 21:11:12.028  INFO [restartedMain] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-25 21:11:12.087  INFO [restartedMain] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 52 ms. Found 5 JPA repository interfaces.
+2023-06-25 21:11:12.758  INFO [restartedMain] [o.s.b.w.e.t.TomcatWebServer] - Tomcat initialized with port(s): 8080 (http)
+2023-06-25 21:11:12.759  INFO [restartedMain] [o.a.c.c.AprLifecycleListener] - An older version [1.2.35] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.1]
+2023-06-25 21:11:12.759  INFO [restartedMain] [o.a.c.c.AprLifecycleListener] - Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2023-06-25 21:11:12.768  INFO [restartedMain] [o.a.c.c.AprLifecycleListener] - OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2023-06-25 21:11:12.776  INFO [restartedMain] [o.a.c.c.StandardService] - Starting service [Tomcat]
+2023-06-25 21:11:12.776  INFO [restartedMain] [o.a.c.c.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-25 21:11:12.825  INFO [restartedMain] [o.a.c.c.C.[.[.[/]] - Initializing Spring embedded WebApplicationContext
+2023-06-25 21:11:12.826  INFO [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1396 ms
+2023-06-25 21:11:13.004  INFO [restartedMain] [o.h.j.i.u.LogHelper] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-25 21:11:13.067  INFO [restartedMain] [o.h.Version] - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-06-25 21:11:13.308  INFO [restartedMain] [c.z.h.HikariDataSource] - HikariPool-1 - Starting...
+2023-06-25 21:11:13.614  INFO [restartedMain] [c.z.h.p.HikariPool] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60a28981
+2023-06-25 21:11:13.616  INFO [restartedMain] [c.z.h.HikariDataSource] - HikariPool-1 - Start completed.
+2023-06-25 21:11:13.630  INFO [restartedMain] [SQL dialect] - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-06-25 21:11:13.631  WARN [restartedMain] [o.h.o.deprecation] - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-25 21:11:14.317  INFO [restartedMain] [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-25 21:11:14.324  INFO [restartedMain] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-25 21:11:14.747  WARN [restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-25 21:11:14.998  INFO [restartedMain] [o.s.s.w.DefaultSecurityFilterChain] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7c1d7365, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3dec7554, org.springframework.security.web.context.SecurityContextHolderFilter@fe39764, org.springframework.security.web.header.HeaderWriterFilter@50734fcc, org.springframework.web.filter.CorsFilter@71fcbdd4, org.springframework.security.web.authentication.logout.LogoutFilter@6dab9aa9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@26bcf19b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@232ce93f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6e764981, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3fb7ed40, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c38bcf5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79e79971, org.springframework.security.web.access.ExceptionTranslationFilter@40e29ce7, org.springframework.security.web.access.intercept.AuthorizationFilter@3d0293e6]
+2023-06-25 21:11:15.179  INFO [restartedMain] [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2023-06-25 21:11:15.206  INFO [restartedMain] [o.s.b.w.e.t.TomcatWebServer] - Tomcat started on port(s): 8080 (http) with context path ''
+2023-06-25 21:11:15.218  INFO [restartedMain] [c.c.b.BookShopApplication] - Started BookShopApplication in 4.191 seconds (process running for 4.675)
+2023-06-25 21:12:48.501  INFO [http-nio-8080-exec-1] [o.a.c.c.C.[.[.[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-25 21:12:48.501  INFO [http-nio-8080-exec-1] [o.s.w.s.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2023-06-25 21:12:48.503  INFO [http-nio-8080-exec-1] [o.s.w.s.DispatcherServlet] - Completed initialization in 1 ms
+2023-06-25 21:12:48.600  INFO [http-nio-8080-exec-2] [c.c.b.c.UserController] - User login: test@gmail.com
+2023-06-25 21:12:48.815  INFO [http-nio-8080-exec-3] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:12:48.844  INFO [http-nio-8080-exec-4] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:12:55.736  INFO [http-nio-8080-exec-5] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 21:12:59.227  INFO [http-nio-8080-exec-6] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 21:12:59.244  INFO [http-nio-8080-exec-6] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 21:13:00.529  INFO [http-nio-8080-exec-9] [c.c.b.c.UserController] - Removing product from the cart: 10
+2023-06-25 21:13:01.272  INFO [http-nio-8080-exec-1] [c.c.b.c.UserController] - Removing product from the cart: 9
+2023-06-25 21:13:04.099  INFO [http-nio-8080-exec-2] [c.c.b.c.OrderController] - Making an order
+2023-06-25 21:13:04.118  INFO [http-nio-8080-exec-3] [c.c.b.c.OrderController] - Making an order
+2023-06-25 21:13:10.749  INFO [http-nio-8080-exec-4] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:13:10.759  INFO [http-nio-8080-exec-5] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:13:11.927  INFO [http-nio-8080-exec-7] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 21:13:11.936  INFO [http-nio-8080-exec-6] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 21:13:12.891  INFO [http-nio-8080-exec-8] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:13:12.899  INFO [http-nio-8080-exec-9] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:13:22.196  INFO [http-nio-8080-exec-10] [c.c.b.c.UserController] - User logout
+2023-06-25 21:13:27.643  INFO [http-nio-8080-exec-1] [c.c.b.c.UserController] - User login: user3@gmail.com
+2023-06-25 21:13:27.719  INFO [http-nio-8080-exec-2] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:13:27.725  INFO [http-nio-8080-exec-3] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:13:29.645  INFO [http-nio-8080-exec-7] [c.c.b.c.ProductController] - Fetching product by ID: 12
+2023-06-25 21:13:29.664  INFO [http-nio-8080-exec-6] [c.c.b.c.ProductController] - Fetching product by ID: 12
+2023-06-25 21:13:33.994  INFO [http-nio-8080-exec-9] [c.c.b.c.ProductController] - Fetching product by ID: 12
+2023-06-25 21:13:36.823  INFO [http-nio-8080-exec-10] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:13:36.834  INFO [http-nio-8080-exec-1] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:16:16.526  INFO [http-nio-8080-exec-4] [c.c.b.c.UserController] - User logout
+2023-06-25 21:16:28.027  INFO [http-nio-8080-exec-5] [c.c.b.c.UserController] - User login: test@gmail.com
+2023-06-25 21:16:28.114  INFO [http-nio-8080-exec-7] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:16:28.122  INFO [http-nio-8080-exec-6] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:16:43.037  INFO [http-nio-8080-exec-8] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 21:16:48.984  INFO [http-nio-8080-exec-9] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 21:16:56.878  INFO [http-nio-8080-exec-10] [c.c.b.c.UserController] - Product added to the cart
+2023-06-25 21:17:09.421  INFO [http-nio-8080-exec-1] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 21:17:09.430  INFO [http-nio-8080-exec-2] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 21:17:10.933  INFO [http-nio-8080-exec-4] [c.c.b.c.UserController] - Removing product from the cart: 11
+2023-06-25 21:17:11.571  INFO [http-nio-8080-exec-5] [c.c.b.c.UserController] - Removing product from the cart: 10
+2023-06-25 21:17:13.022  INFO [http-nio-8080-exec-7] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:17:13.027  INFO [http-nio-8080-exec-6] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:17:15.062  INFO [http-nio-8080-exec-8] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:17:15.068  INFO [http-nio-8080-exec-9] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:17:15.878  INFO [http-nio-8080-exec-10] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 21:17:15.889  INFO [http-nio-8080-exec-1] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 21:31:36.041  INFO [http-nio-8080-exec-4] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:31:36.049  INFO [http-nio-8080-exec-5] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:31:45.386  INFO [http-nio-8080-exec-7] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 21:31:45.394  INFO [http-nio-8080-exec-6] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 21:31:47.077  INFO [http-nio-8080-exec-8] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:31:47.083  INFO [http-nio-8080-exec-9] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:31:47.656  INFO [http-nio-8080-exec-10] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 21:31:47.663  INFO [http-nio-8080-exec-1] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 21:31:50.553  INFO [http-nio-8080-exec-2] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 21:31:50.561  INFO [http-nio-8080-exec-3] [c.c.b.c.UserController] - Viewing cart
+2023-06-25 21:31:51.498  INFO [http-nio-8080-exec-4] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:31:51.504  INFO [http-nio-8080-exec-5] [c.c.b.c.ProductController] - Fetching all products
+2023-06-25 21:33:12.524  INFO [http-nio-8080-exec-8] [c.c.b.c.UserController] - User logout
+2023-06-25 21:34:39.812  INFO [SpringApplicationShutdownHook] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-25 21:34:39.815  INFO [SpringApplicationShutdownHook] [c.z.h.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2023-06-25 21:34:39.822  INFO [SpringApplicationShutdownHook] [c.z.h.HikariDataSource] - HikariPool-1 - Shutdown completed.
